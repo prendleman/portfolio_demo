@@ -4,7 +4,7 @@ numpy>=1.26.0
 pandas>=2.1.0
 pyarrow>=14.0.0
 python-dotenv>=1.0.0
-scikit-learn>=1.3.0
+scikit-learn>=1.8.0
 
 # PBIP tooling (optional): live site logo capture via Selenium; branding PNG generation
 Pillow>=10.2.0
