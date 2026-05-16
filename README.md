@@ -338,6 +338,10 @@ Repo **description**, **topics**, CLI/PAT maintenance scripts, and
 **Linguist** notes live in
 [`docs/REPO_MAINTENANCE.md`](docs/REPO_MAINTENANCE.md).
 
+**Version snapshot:** see [`CHANGELOG.md`](CHANGELOG.md) and tag
+**`v1.0.0`**. Copy-paste blurbs for LinkedIn, email, and profiles:
+[`docs/OUTREACH_SNIPPETS.md`](docs/OUTREACH_SNIPPETS.md).
+
 ## Credits / scaffold notes
 
 PBIR theme scaffolding was bootstrapped from the public
