@@ -1,0 +1,85 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.0.0/schema.json",
+  "name": "ex_hero",
+  "position": {
+    "x": 48,
+    "y": 16,
+    "z": 660.0,
+    "height": 164,
+    "width": 764,
+    "tabOrder": 660
+  },
+  "visual": {
+    "visualType": "textbox",
+    "objects": {
+      "general": [
+        {
+          "properties": {
+            "paragraphs": [
+              {
+                "textRuns": [
+                  {
+                    "value": "Portfolio renewal intelligence",
+                    "textStyle": {
+                      "fontFace": "Segoe UI Semibold",
+                      "fontSize": 11,
+                      "color": "#115E59"
+                    }
+                  }
+                ]
+              },
+              {
+                "textRuns": [
+                  {
+                    "value": "Who renews next\u2014and where do the economics tilt?",
+                    "textStyle": {
+                      "fontFace": "Segoe UI Semibold",
+                      "fontSize": 22
+                    }
+                  }
+                ]
+              },
+              {
+                "textRuns": [
+                  {
+                    "value": "Synthetic multifamily renewal lens: metros and ecosystem lanes, modeled risk tiers, and gold exports for BI\u2014for storytelling only, not live operations.",
+                    "textStyle": {
+                      "fontFace": "Segoe UI",
+                      "fontSize": 12
+                    }
+                  }
+                ]
+              },
+              {
+                "textRuns": [
+                  {
+                    "value": "Refresh the gold CSV after each score run; use the bookmark bar to walk the narrative.",
+                    "textStyle": {
+                      "fontFace": "Segoe UI",
+                      "fontSize": 10.5,
+                      "color": "#4A5568"
+                    }
+                  }
+                ]
+              }
+            ]
+          }
+        }
+      ],
+      "background": [
+        {
+          "properties": {
+            "show": {
+              "expr": {
+                "Literal": {
+                  "Value": "false"
+                }
+              }
+            }
+          }
+        }
+      ]
+    },
+    "drillFilterOtherVisuals": false
+  }
+}

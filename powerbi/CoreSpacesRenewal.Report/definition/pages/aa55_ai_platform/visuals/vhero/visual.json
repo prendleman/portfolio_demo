@@ -1,0 +1,84 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.0.0/schema.json",
+  "name": "ai_hero",
+  "position": {
+    "x": 48,
+    "y": 22,
+    "z": 660.0,
+    "height": 158,
+    "width": 1184,
+    "tabOrder": 660
+  },
+  "visual": {
+    "visualType": "textbox",
+    "objects": {
+      "general": [
+        {
+          "properties": {
+            "paragraphs": [
+              {
+                "textRuns": [
+                  {
+                    "value": "Databricks \u00b7 Fabric \u00b7 Copilot governance",
+                    "textStyle": {
+                      "fontFace": "Segoe UI Semibold",
+                      "fontSize": 11,
+                      "color": "#115E59"
+                    }
+                  }
+                ]
+              },
+              {
+                "textRuns": [
+                  {
+                    "value": "Serve ML through governed semantic models\u2014not shadow spreadsheets",
+                    "textStyle": {
+                      "fontFace": "Segoe UI Semibold",
+                      "fontSize": 28
+                    }
+                  }
+                ]
+              },
+              {
+                "textRuns": [
+                  {
+                    "value": "Demo portfolio uses synthetic leases; production copilots must read from authorized lakehouse tables with RLS/CLS parity to Power BI semantic models. Allowlisted semantic surfaces in this demo: Renewal Actual Rate by metro, Renewal Actual Rate by risk tier, Avg Predicted Renewal Prob by ecosystem segment, Median Monthly Rent by metro cluster, Gold table freshness scored at.",
+                    "textStyle": {
+                      "fontFace": "Segoe UI",
+                      "fontSize": 13.5
+                    }
+                  }
+                ]
+              },
+              {
+                "textRuns": [
+                  {
+                    "value": "Always state filter context (metro, cohort month, ecosystem segment) and data_as_of timestamp when discussing metrics. Manifest UTC stamp 2026-05-15.",
+                    "textStyle": {
+                      "fontFace": "Segoe UI",
+                      "fontSize": 11
+                    }
+                  }
+                ]
+              }
+            ]
+          }
+        }
+      ],
+      "background": [
+        {
+          "properties": {
+            "show": {
+              "expr": {
+                "Literal": {
+                  "Value": "false"
+                }
+              }
+            }
+          }
+        }
+      ]
+    },
+    "drillFilterOtherVisuals": false
+  }
+}

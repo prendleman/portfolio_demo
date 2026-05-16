@@ -1,0 +1,2 @@
+# Optional: copy to publish-url.txt (gitignored) with your Copilot Studio demo / web chat URL.
+https://copilotstudio.microsoft.com/

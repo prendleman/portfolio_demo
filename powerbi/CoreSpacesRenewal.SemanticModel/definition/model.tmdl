@@ -1,0 +1,11 @@
+model Model
+	culture: en-US
+	defaultPowerBIDataSourceVersion: powerBI_V3
+	discourageImplicitMeasures
+
+ref expression GoldRenewalCsvPath
+
+ref table GoldRenewalScores
+ref table MetaPortfolio
+
+ref cultureInfo en-US

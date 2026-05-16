@@ -1,0 +1,19 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/bookmark/1.4.0/schema.json",
+  "displayName": "Opportunity",
+  "name": "a518171311dd1f2ad8cb",
+  "explorationState": {
+    "version": "1.3",
+    "activeSection": "aa60_opportunity_lab",
+    "filters": {
+      "byExpr": []
+    },
+    "sections": {},
+    "objects": {
+      "merge": {}
+    }
+  },
+  "options": {
+    "targetVisualNames": []
+  }
+}

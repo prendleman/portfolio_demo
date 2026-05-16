@@ -1,0 +1,16 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.0.0/schema.json",
+  "name": "chrome_bookmark_navigator",
+  "position": {
+    "x": 168,
+    "y": 840.0,
+    "z": 9300,
+    "width": 1096,
+    "height": 58.0,
+    "tabOrder": 9300
+  },
+  "visual": {
+    "visualType": "bookmarkNavigator",
+    "drillFilterOtherVisuals": false
+  }
+}

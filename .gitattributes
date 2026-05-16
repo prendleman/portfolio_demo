@@ -1,0 +1,7 @@
+# Reduce PBIP / report JSON skew in the GitHub language bar (Linguist).
+# See https://github.com/github-linguist/linguist/blob/master/docs/overrides.md
+powerbi/CoreSpacesRenewal.Report/definition/** linguist-vendored
+powerbi/CoreSpacesRenewal.Report/StaticResources/** linguist-vendored
+
+# Markdown: normalize to LF so GitHub/CommonMark parsing is stable (no CRLF-only quirks).
+*.md text eol=lf

@@ -1,0 +1,38 @@
+---
+description: After substantive edits, commit to git (safe workflow); do not push unless asked.
+alwaysApply: true
+---
+
+# Git — always commit when finishing work
+
+## Default behavior
+
+After you **complete** a coding task (or a coherent batch of related edits) in this repository, **create a git commit** so work is not left only in the working tree. Skip committing only when:
+
+- There is **nothing to commit** (clean tree), or
+- The user **explicitly** asked for no commit / WIP-only / “don’t commit yet.”
+
+This **replaces** a “commit only when explicitly asked” habit: here, committing is the default end of a task unless the user opts out.
+
+## Safety (unchanged expectations)
+
+- **Never** update `git config`.
+- **Never** run destructive or irreversible git commands (`push --force`, `reset --hard`, etc.) unless the user explicitly requests them in chat or another binding rule.
+- **Never** skip hooks (`--no-verify`, `--no-gpg-sign`, etc.) unless the user explicitly asks.
+- **Never** force-push to `main` / `master`; warn if the user requests it.
+- **Avoid** `git commit --amend` except under the same strict conditions as before (user asked amend, or hook-only fix, HEAD was yours, not pushed).
+- **Never** commit likely secrets (`.env`, raw tokens, `credentials.json`, etc.); warn if the user asks to include them.
+- **Do not `git push`** to the remote unless the user **explicitly** asks in that conversation.
+
+## Commit workflow
+
+When committing, still follow a sound process:
+
+1. Run `git status` and `git diff` (and `git log -5 --oneline` for message style) so the message matches the repo.
+2. Draft a concise message (why, not only what); stage relevant files; commit.
+3. On Windows PowerShell, use `git commit -m "subject" -m "body"` (or a here-string) instead of bash heredocs when needed.
+4. If a hook **fails**, fix the issue and create a **new** commit (no amend unless the narrow amend rules apply).
+
+## Global Cursor User Rules
+
+If you still have **User Rules** in Cursor Settings that say “only commit when explicitly requested,” remove or edit that line so it does not fight this project rule.

@@ -1,0 +1,19 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/bookmark/1.4.0/schema.json",
+  "displayName": "Executive",
+  "name": "2f2cd087e191cc7e1eae",
+  "explorationState": {
+    "version": "1.3",
+    "activeSection": "aa10_exec_overview",
+    "filters": {
+      "byExpr": []
+    },
+    "sections": {},
+    "objects": {
+      "merge": {}
+    }
+  },
+  "options": {
+    "targetVisualNames": []
+  }
+}

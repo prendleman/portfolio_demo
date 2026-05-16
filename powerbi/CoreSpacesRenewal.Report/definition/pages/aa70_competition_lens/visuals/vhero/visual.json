@@ -1,0 +1,84 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.0.0/schema.json",
+  "name": "co_hero",
+  "position": {
+    "x": 48,
+    "y": 26,
+    "z": 660.0,
+    "height": 144,
+    "width": 734,
+    "tabOrder": 660
+  },
+  "visual": {
+    "visualType": "textbox",
+    "objects": {
+      "general": [
+        {
+          "properties": {
+            "paragraphs": [
+              {
+                "textRuns": [
+                  {
+                    "value": "Competitive framing (public)",
+                    "textStyle": {
+                      "fontFace": "Segoe UI Semibold",
+                      "fontSize": 11,
+                      "color": "#115E59"
+                    }
+                  }
+                ]
+              },
+              {
+                "textRuns": [
+                  {
+                    "value": "Benchmarking axes for renewal narrative",
+                    "textStyle": {
+                      "fontFace": "Segoe UI Semibold",
+                      "fontSize": 28
+                    }
+                  }
+                ]
+              },
+              {
+                "textRuns": [
+                  {
+                    "value": "Combined student housing and conventional / build-to-rent\u2013adjacent narratives appear on the corporate site (see captured pages student-housing.md, build-to-rent.md, properties.md). Vertical integration (acquire, develop, operate) is reiterated on our-divisions.md. Student-heavy comparables mentioned in-repo include American Campus Communities, Greystar, Landmark Properties, Scion Group. BFR-adjacent names include Invitation Homes, AMH (American Homes 4 Rent), Tricon Residential, Progress Residential.",
+                    "textStyle": {
+                      "fontFace": "Segoe UI",
+                      "fontSize": 13.5
+                    }
+                  }
+                ]
+              },
+              {
+                "textRuns": [
+                  {
+                    "value": "Synthetic portfolio only \u00b7 competitive copy last aligned to disk 2026-05-15 (UTC file date)",
+                    "textStyle": {
+                      "fontFace": "Segoe UI",
+                      "fontSize": 11
+                    }
+                  }
+                ]
+              }
+            ]
+          }
+        }
+      ],
+      "background": [
+        {
+          "properties": {
+            "show": {
+              "expr": {
+                "Literal": {
+                  "Value": "false"
+                }
+              }
+            }
+          }
+        }
+      ]
+    },
+    "drillFilterOtherVisuals": false
+  }
+}

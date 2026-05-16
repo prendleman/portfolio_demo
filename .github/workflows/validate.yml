@@ -1,0 +1,37 @@
+name: validate
+
+on:
+  push:
+    branches: [main, master]
+  pull_request:
+    branches: [main, master]
+
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+
+      - name: Install dependencies
+        run: pip install -r requirements.txt
+
+      - name: Compile Python
+        run: python -m compileall python scripts monitoring -q
+
+      - name: End-to-end synthetic pipeline (no MLflow)
+        env:
+          PORTFOLIO_USE_MLFLOW: "0"
+        run: python scripts/run_local_pipeline.py
+
+      - name: PSI check (self-compare gold Parquet)
+        run: python monitoring/psi_check.py
+
+      - name: Schema + PSI script smoke test
+        run: >-
+          python scripts/monitoring_psi_schema.py
+          --baseline data/gold/gold_renewal_scores.parquet
+          --current data/gold/gold_renewal_scores.parquet

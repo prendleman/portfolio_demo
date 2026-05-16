@@ -1,0 +1,4 @@
+# Optional: deploy demo job via Databricks Jobs API (Python SDK)
+# Install with: pip install -r requirements.txt -r requirements-databricks-deploy.txt
+databricks-sdk>=0.36.0
+python-dotenv>=1.0.0

@@ -1,0 +1,11 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/gitIntegration/platformProperties/2.0.0/schema.json",
+  "metadata": {
+    "type": "SemanticModel",
+    "displayName": "CoreSpacesRenewal"
+  },
+  "config": {
+    "version": "2.0",
+    "logicalId": "92c4c4c8-71d2-4d4d-9022-afc4cafe0001"
+  }
+}

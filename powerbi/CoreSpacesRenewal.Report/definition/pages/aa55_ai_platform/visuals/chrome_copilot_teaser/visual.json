@@ -1,0 +1,50 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.0.0/schema.json",
+  "name": "chrome_copilot_teaser",
+  "position": {
+    "x": 48,
+    "y": 854.0,
+    "z": 9280,
+    "width": 176,
+    "height": 36,
+    "tabOrder": 9280
+  },
+  "visual": {
+    "visualType": "textbox",
+    "objects": {
+      "general": [
+        {
+          "properties": {
+            "paragraphs": [
+              {
+                "textRuns": [
+                  {
+                    "value": "Copilot Studio \u25b8",
+                    "url": "https://copilotstudio.microsoft.com/",
+                    "textStyle": {
+                      "fontFace": "Segoe UI Semibold",
+                      "fontSize": 11,
+                      "color": "#3F68EB"
+                    }
+                  }
+                ]
+              },
+              {
+                "textRuns": [
+                  {
+                    "value": "Demo agent",
+                    "textStyle": {
+                      "fontFace": "Segoe UI",
+                      "fontSize": 9
+                    }
+                  }
+                ]
+              }
+            ]
+          }
+        }
+      ]
+    },
+    "drillFilterOtherVisuals": false
+  }
+}

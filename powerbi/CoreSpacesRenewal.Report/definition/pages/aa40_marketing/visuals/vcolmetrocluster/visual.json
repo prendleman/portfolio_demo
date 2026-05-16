@@ -1,0 +1,106 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.0.0/schema.json",
+  "name": "mk_mc",
+  "position": {
+    "x": 650.0,
+    "y": 294,
+    "z": 2050.0,
+    "width": 582.0,
+    "height": 516.0,
+    "tabOrder": 2050
+  },
+  "visual": {
+    "visualType": "clusteredColumnChart",
+    "query": {
+      "queryState": {
+        "Category": {
+          "projections": [
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "GoldRenewalScores"
+                    }
+                  },
+                  "Property": "metro_cluster"
+                }
+              },
+              "queryRef": "GoldRenewalScores.metro_cluster",
+              "active": true
+            }
+          ]
+        },
+        "Y": {
+          "projections": [
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "GoldRenewalScores"
+                    }
+                  },
+                  "Property": "Renewal Actual Rate %"
+                }
+              },
+              "queryRef": "GoldRenewalScores.Renewal Actual Rate %",
+              "nativeQueryRef": "Renewal Actual Rate %"
+            },
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "GoldRenewalScores"
+                    }
+                  },
+                  "Property": "Avg Predicted Renewal Prob"
+                }
+              },
+              "queryRef": "GoldRenewalScores.Avg Predicted Renewal Prob",
+              "nativeQueryRef": "Avg Predicted Renewal Prob"
+            }
+          ]
+        }
+      }
+    },
+    "objects": {
+      "title": [
+        {
+          "properties": {
+            "show": {
+              "expr": {
+                "Literal": {
+                  "Value": "true"
+                }
+              }
+            },
+            "fontSize": {
+              "expr": {
+                "Literal": {
+                  "Value": "13D"
+                }
+              }
+            },
+            "fontFamily": {
+              "expr": {
+                "Literal": {
+                  "Value": "'Segoe UI Semibold'"
+                }
+              }
+            },
+            "text": {
+              "expr": {
+                "Literal": {
+                  "Value": "'Renewals by metro archetype cluster (portfolio fiction)'"
+                }
+              }
+            }
+          }
+        }
+      ]
+    },
+    "drillFilterOtherVisuals": true
+  }
+}

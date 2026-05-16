@@ -1,0 +1,92 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.0.0/schema.json",
+  "name": "ex_tree_brand",
+  "position": {
+    "x": 650.0,
+    "y": 422.0,
+    "z": 2160.0,
+    "width": 582.0,
+    "height": 408.0,
+    "tabOrder": 2160
+  },
+  "visual": {
+    "visualType": "clusteredBarChart",
+    "query": {
+      "queryState": {
+        "Category": {
+          "projections": [
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "GoldRenewalScores"
+                    }
+                  },
+                  "Property": "brand_line"
+                }
+              },
+              "queryRef": "GoldRenewalScores.brand_line",
+              "active": true
+            }
+          ]
+        },
+        "Y": {
+          "projections": [
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "GoldRenewalScores"
+                    }
+                  },
+                  "Property": "Gold Lease Rows"
+                }
+              },
+              "queryRef": "GoldRenewalScores.Gold Lease Rows",
+              "nativeQueryRef": "Leases"
+            }
+          ]
+        }
+      }
+    },
+    "objects": {
+      "title": [
+        {
+          "properties": {
+            "show": {
+              "expr": {
+                "Literal": {
+                  "Value": "true"
+                }
+              }
+            },
+            "fontSize": {
+              "expr": {
+                "Literal": {
+                  "Value": "11D"
+                }
+              }
+            },
+            "fontFamily": {
+              "expr": {
+                "Literal": {
+                  "Value": "'Segoe UI Semibold'"
+                }
+              }
+            },
+            "text": {
+              "expr": {
+                "Literal": {
+                  "Value": "'Lease count by synthetic brand line (portfolio mix)'"
+                }
+              }
+            }
+          }
+        }
+      ]
+    },
+    "drillFilterOtherVisuals": true
+  }
+}

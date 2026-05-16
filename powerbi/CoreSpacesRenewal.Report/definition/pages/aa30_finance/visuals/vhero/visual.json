@@ -1,0 +1,84 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.0.0/schema.json",
+  "name": "fn_hero",
+  "position": {
+    "x": 48,
+    "y": 16,
+    "z": 660.0,
+    "height": 164,
+    "width": 1104,
+    "tabOrder": 660
+  },
+  "visual": {
+    "visualType": "textbox",
+    "objects": {
+      "general": [
+        {
+          "properties": {
+            "paragraphs": [
+              {
+                "textRuns": [
+                  {
+                    "value": "Asset economics lens",
+                    "textStyle": {
+                      "fontFace": "Segoe UI Semibold",
+                      "fontSize": 11,
+                      "color": "#115E59"
+                    }
+                  }
+                ]
+              },
+              {
+                "textRuns": [
+                  {
+                    "value": "Rent intensity vs modeled renewal softness",
+                    "textStyle": {
+                      "fontFace": "Segoe UI Semibold",
+                      "fontSize": 28
+                    }
+                  }
+                ]
+              },
+              {
+                "textRuns": [
+                  {
+                    "value": "Synthetic exposures for JV / lender conversations \u2014 underwriting stays illustrative until real rent rolls land.",
+                    "textStyle": {
+                      "fontFace": "Segoe UI",
+                      "fontSize": 13.5
+                    }
+                  }
+                ]
+              },
+              {
+                "textRuns": [
+                  {
+                    "value": "Bars pair median vs average monthly rent proxies to spotlight distribution skew.",
+                    "textStyle": {
+                      "fontFace": "Segoe UI",
+                      "fontSize": 11
+                    }
+                  }
+                ]
+              }
+            ]
+          }
+        }
+      ],
+      "background": [
+        {
+          "properties": {
+            "show": {
+              "expr": {
+                "Literal": {
+                  "Value": "false"
+                }
+              }
+            }
+          }
+        }
+      ]
+    },
+    "drillFilterOtherVisuals": false
+  }
+}

@@ -1,0 +1,128 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.0.0/schema.json",
+  "name": "co_digest",
+  "position": {
+    "x": 800.0,
+    "y": 26.0,
+    "z": 688.0,
+    "width": 432.0,
+    "height": 218.0,
+    "tabOrder": 688
+  },
+  "visual": {
+    "visualType": "textbox",
+    "objects": {
+      "general": [
+        {
+          "properties": {
+            "paragraphs": [
+              {
+                "textRuns": [
+                  {
+                    "value": "Peer map excerpt (parsed in-repo)",
+                    "textStyle": {
+                      "fontFace": "Segoe UI Semibold",
+                      "fontSize": 10,
+                      "color": "#115E59"
+                    }
+                  }
+                ]
+              },
+              {
+                "textRuns": [
+                  {
+                    "value": "In-repo research digest \u2014 peers are illustrative.",
+                    "textStyle": {
+                      "fontFace": "Segoe UI",
+                      "fontSize": 9.25
+                    }
+                  }
+                ]
+              },
+              {
+                "textRuns": [
+                  {
+                    "value": "Primary file: research/core_spaces/competitive_landscape.md",
+                    "textStyle": {
+                      "fontFace": "Segoe UI",
+                      "fontSize": 9.25
+                    }
+                  }
+                ]
+              },
+              {
+                "textRuns": [
+                  {
+                    "value": "Positioning (baseline):",
+                    "textStyle": {
+                      "fontFace": "Segoe UI",
+                      "fontSize": 9.25
+                    }
+                  }
+                ]
+              },
+              {
+                "textRuns": [
+                  {
+                    "value": "  \u2022 Combined student housing and conventional / build-to-rent\u2013adjacent narratives appear on the corporate site (see captured pages\u2026",
+                    "textStyle": {
+                      "fontFace": "Segoe UI",
+                      "fontSize": 9.25
+                    }
+                  }
+                ]
+              },
+              {
+                "textRuns": [
+                  {
+                    "value": "  \u2022 Vertical integration (acquire, develop, operate) is reiterated on our-divisions.md.",
+                    "textStyle": {
+                      "fontFace": "Segoe UI",
+                      "fontSize": 9.25
+                    }
+                  }
+                ]
+              },
+              {
+                "textRuns": [
+                  {
+                    "value": "Student-housing sample: American Campus Communities, Greystar, Landmark Properties, Scion Group, CA Ventures / \u201cCA Student Living\u201d lineage.",
+                    "textStyle": {
+                      "fontFace": "Segoe UI",
+                      "fontSize": 9.25
+                    }
+                  }
+                ]
+              },
+              {
+                "textRuns": [
+                  {
+                    "value": "BFR / horizontal sample: Invitation Homes, AMH (American Homes 4 Rent), Tricon Residential, Progress Residential, Echo Street / other institutional SFR JV brands.",
+                    "textStyle": {
+                      "fontFace": "Segoe UI",
+                      "fontSize": 9.25
+                    }
+                  }
+                ]
+              }
+            ]
+          }
+        }
+      ],
+      "background": [
+        {
+          "properties": {
+            "show": {
+              "expr": {
+                "Literal": {
+                  "Value": "false"
+                }
+              }
+            }
+          }
+        }
+      ]
+    },
+    "drillFilterOtherVisuals": false
+  }
+}

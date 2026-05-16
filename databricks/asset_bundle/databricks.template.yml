@@ -1,0 +1,47 @@
+# Copy to repository root as `databricks.yml` after setting `WORKSPACE_HOST` (or override `targets.dev.workspace.host`).
+# CLI: databricks bundle validate  |  databricks bundle deploy --target dev
+#
+# Docs: https://docs.databricks.com/dev-tools/bundles/index.html
+
+bundle:
+  name: cs_renewal_portfolio_demo
+
+variables:
+  workspace_host:
+    description: "Databricks workspace URL, e.g. https://adb-123.4.azuredatabricks.net"
+    default: "${WORKSPACE_HOST}"
+
+targets:
+  dev:
+    mode: development
+    default: true
+    workspace:
+      host: ${var.workspace_host}
+
+resources:
+  jobs:
+    demo_renewal_train_score:
+      name: "[demo] Train renewal then score gold"
+      max_concurrent_runs: 1
+      job_clusters:
+        - job_cluster_key: shared_cluster
+          new_cluster:
+            spark_version: 15.4.x-scala2.12
+            node_type_id: Standard_DS3_v2
+            num_workers: 1
+      tasks:
+        - task_key: train
+          job_cluster_key: shared_cluster
+          notebook_task:
+            notebook_path: ./databricks/02_train_renewal_model/train_mlflow
+            base_parameters:
+              ENV: "demo"
+        - task_key: score
+          depends_on:
+            - task_key: train
+          job_cluster_key: shared_cluster
+          notebook_task:
+            notebook_path: ./databricks/03_score_batch/score_gold
+            base_parameters:
+              EXPORT_CSV_FOR_PBIP: "true"
+      # Production: split jobs, add UC volumes, queueing, and approval gates — not in this template.

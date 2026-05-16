@@ -1,0 +1,84 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.0.0/schema.json",
+  "name": "op_hero",
+  "position": {
+    "x": 48,
+    "y": 16,
+    "z": 660.0,
+    "height": 152,
+    "width": 1104,
+    "tabOrder": 660
+  },
+  "visual": {
+    "visualType": "textbox",
+    "objects": {
+      "general": [
+        {
+          "properties": {
+            "paragraphs": [
+              {
+                "textRuns": [
+                  {
+                    "value": "Portfolio operations",
+                    "textStyle": {
+                      "fontFace": "Segoe UI Semibold",
+                      "fontSize": 11,
+                      "color": "#115E59"
+                    }
+                  }
+                ]
+              },
+              {
+                "textRuns": [
+                  {
+                    "value": "Leasing posture by modeled risk tier",
+                    "textStyle": {
+                      "fontFace": "Segoe UI Semibold",
+                      "fontSize": 28
+                    }
+                  }
+                ]
+              },
+              {
+                "textRuns": [
+                  {
+                    "value": "Operational read on renewal stress for asset + onsite teams\u2014velocity, service load, and modeled churn.",
+                    "textStyle": {
+                      "fontFace": "Segoe UI",
+                      "fontSize": 13.5
+                    }
+                  }
+                ]
+              },
+              {
+                "textRuns": [
+                  {
+                    "value": "All tiers are heuristic labels over synthetic renewal scores (D = highest modeled churn sensitivity).",
+                    "textStyle": {
+                      "fontFace": "Segoe UI",
+                      "fontSize": 11
+                    }
+                  }
+                ]
+              }
+            ]
+          }
+        }
+      ],
+      "background": [
+        {
+          "properties": {
+            "show": {
+              "expr": {
+                "Literal": {
+                  "Value": "false"
+                }
+              }
+            }
+          }
+        }
+      ]
+    },
+    "drillFilterOtherVisuals": false
+  }
+}

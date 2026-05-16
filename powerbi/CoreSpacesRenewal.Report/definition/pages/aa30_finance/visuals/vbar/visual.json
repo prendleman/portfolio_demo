@@ -1,0 +1,106 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.0.0/schema.json",
+  "name": "fn_bar",
+  "position": {
+    "x": 48,
+    "y": 354,
+    "z": 2100.0,
+    "width": 582.0,
+    "height": 476.0,
+    "tabOrder": 2100
+  },
+  "visual": {
+    "visualType": "clusteredBarChart",
+    "query": {
+      "queryState": {
+        "Category": {
+          "projections": [
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "GoldRenewalScores"
+                    }
+                  },
+                  "Property": "metro"
+                }
+              },
+              "queryRef": "GoldRenewalScores.metro",
+              "active": true
+            }
+          ]
+        },
+        "Y": {
+          "projections": [
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "GoldRenewalScores"
+                    }
+                  },
+                  "Property": "Median Monthly Rent $"
+                }
+              },
+              "queryRef": "GoldRenewalScores.Median Monthly Rent $",
+              "nativeQueryRef": "Median Monthly Rent $"
+            },
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "GoldRenewalScores"
+                    }
+                  },
+                  "Property": "Avg Monthly Rent $"
+                }
+              },
+              "queryRef": "GoldRenewalScores.Avg Monthly Rent $",
+              "nativeQueryRef": "Avg Monthly Rent $"
+            }
+          ]
+        }
+      }
+    },
+    "objects": {
+      "title": [
+        {
+          "properties": {
+            "show": {
+              "expr": {
+                "Literal": {
+                  "Value": "true"
+                }
+              }
+            },
+            "fontSize": {
+              "expr": {
+                "Literal": {
+                  "Value": "13D"
+                }
+              }
+            },
+            "fontFamily": {
+              "expr": {
+                "Literal": {
+                  "Value": "'Segoe UI Semibold'"
+                }
+              }
+            },
+            "text": {
+              "expr": {
+                "Literal": {
+                  "Value": "'Rent curve by metro \u2014 underwriting-friendly orientation'"
+                }
+              }
+            }
+          }
+        }
+      ]
+    },
+    "drillFilterOtherVisuals": true
+  }
+}

@@ -1,0 +1,106 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.0.0/schema.json",
+  "name": "ai_model_mix",
+  "position": {
+    "x": 48,
+    "y": 356,
+    "z": 2100.0,
+    "width": 583.0,
+    "height": 246.48000000000002,
+    "tabOrder": 2100
+  },
+  "visual": {
+    "visualType": "clusteredColumnChart",
+    "query": {
+      "queryState": {
+        "Category": {
+          "projections": [
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "GoldRenewalScores"
+                    }
+                  },
+                  "Property": "model_name"
+                }
+              },
+              "queryRef": "GoldRenewalScores.model_name",
+              "active": true
+            }
+          ]
+        },
+        "Y": {
+          "projections": [
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "GoldRenewalScores"
+                    }
+                  },
+                  "Property": "Renewal Actual Rate %"
+                }
+              },
+              "queryRef": "GoldRenewalScores.Renewal Actual Rate %",
+              "nativeQueryRef": "Renewal Actual Rate %"
+            },
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "GoldRenewalScores"
+                    }
+                  },
+                  "Property": "Avg Predicted Renewal Prob"
+                }
+              },
+              "queryRef": "GoldRenewalScores.Avg Predicted Renewal Prob",
+              "nativeQueryRef": "Avg Predicted Renewal Prob"
+            }
+          ]
+        }
+      }
+    },
+    "objects": {
+      "title": [
+        {
+          "properties": {
+            "show": {
+              "expr": {
+                "Literal": {
+                  "Value": "true"
+                }
+              }
+            },
+            "fontSize": {
+              "expr": {
+                "Literal": {
+                  "Value": "13D"
+                }
+              }
+            },
+            "fontFamily": {
+              "expr": {
+                "Literal": {
+                  "Value": "'Segoe UI Semibold'"
+                }
+              }
+            },
+            "text": {
+              "expr": {
+                "Literal": {
+                  "Value": "'Model lineage posture \u2014 renewal lift vs calibrated probability'"
+                }
+              }
+            }
+          }
+        }
+      ]
+    },
+    "drillFilterOtherVisuals": true
+  }
+}

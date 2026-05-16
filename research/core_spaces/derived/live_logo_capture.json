@@ -1,0 +1,10 @@
+{
+  "captured_at_utc": "2026-05-15T18:34:39Z",
+  "url": "https://corespaces.com/",
+  "method": "downloaded raster https://corespaces.com/favicon/apple-touch-icon.png",
+  "outputs": {
+    "registeredResource": "powerbi\\CoreSpacesRenewal.Report\\StaticResources\\RegisteredResources\\CS_Logomark900112233.png",
+    "mirror": "branding\\logomark_from_live_site.png"
+  },
+  "disclaimer": "Trademark/logo belongs to Core Spaces; portfolio demo only \u2014 not endorsed."
+}

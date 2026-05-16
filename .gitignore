@@ -1,0 +1,21 @@
+__pycache__/
+*.py[cod]
+.venv/
+venv/
+.env
+mlruns/
+.ipynb_checkpoints/
+.databricks/
+.pbip-demo-ref/
+
+artifacts/renewal_pipeline.joblib
+artifacts/last_train.json
+artifacts/last_score.json
+
+*.log
+.DS_Store
+powerbi/*/release/*.pbix
+powerbi/copilot-studio/publish-url.txt
+
+# Recruiting / job descriptions — local only, not for public clone
+docs/recruiting/

@@ -1,0 +1,183 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.0.0/schema.json",
+  "name": "opp_digest",
+  "position": {
+    "x": 800.0,
+    "y": 26.0,
+    "z": 688.0,
+    "width": 432.0,
+    "height": 218.0,
+    "tabOrder": 688
+  },
+  "visual": {
+    "visualType": "textbox",
+    "objects": {
+      "general": [
+        {
+          "properties": {
+            "paragraphs": [
+              {
+                "textRuns": [
+                  {
+                    "value": "Structured digest (parsed in-repo)",
+                    "textStyle": {
+                      "fontFace": "Segoe UI Semibold",
+                      "fontSize": 10,
+                      "color": "#115E59"
+                    }
+                  }
+                ]
+              },
+              {
+                "textRuns": [
+                  {
+                    "value": "In-repo research digest \u2014 public signals only.",
+                    "textStyle": {
+                      "fontFace": "Segoe UI",
+                      "fontSize": 9.25
+                    }
+                  }
+                ]
+              },
+              {
+                "textRuns": [
+                  {
+                    "value": "Primary file: research/core_spaces/opportunity_map.md",
+                    "textStyle": {
+                      "fontFace": "Segoe UI",
+                      "fontSize": 9.25
+                    }
+                  }
+                ]
+              },
+              {
+                "textRuns": [
+                  {
+                    "value": "Sources captured:",
+                    "textStyle": {
+                      "fontFace": "Segoe UI",
+                      "fontSize": 9.25
+                    }
+                  }
+                ]
+              },
+              {
+                "textRuns": [
+                  {
+                    "value": "  \u2022 Marketing careers overview: site/pages/careers.md (https://corespaces.com/careers)",
+                    "textStyle": {
+                      "fontFace": "Segoe UI",
+                      "fontSize": 9.25
+                    }
+                  }
+                ]
+              },
+              {
+                "textRuns": [
+                  {
+                    "value": "  \u2022 Division definitions: site/pages/our-divisions.md (https://corespaces.com/our-divisions)",
+                    "textStyle": {
+                      "fontFace": "Segoe UI",
+                      "fontSize": 9.25
+                    }
+                  }
+                ]
+              },
+              {
+                "textRuns": [
+                  {
+                    "value": "  \u2022 Corporate strategy page: site/pages/strategy.md",
+                    "textStyle": {
+                      "fontFace": "Segoe UI",
+                      "fontSize": 9.25
+                    }
+                  }
+                ]
+              },
+              {
+                "textRuns": [
+                  {
+                    "value": "  \u2022 Build-to-rent line: site/pages/build-to-rent.md",
+                    "textStyle": {
+                      "fontFace": "Segoe UI",
+                      "fontSize": 9.25
+                    }
+                  }
+                ]
+              },
+              {
+                "textRuns": [
+                  {
+                    "value": "  \u2022 Student housing line: site/pages/student-housing.md",
+                    "textStyle": {
+                      "fontFace": "Segoe UI",
+                      "fontSize": 9.25
+                    }
+                  }
+                ]
+              },
+              {
+                "textRuns": [
+                  {
+                    "value": "Themes:",
+                    "textStyle": {
+                      "fontFace": "Segoe UI",
+                      "fontSize": 9.25
+                    }
+                  }
+                ]
+              },
+              {
+                "textRuns": [
+                  {
+                    "value": "  \u2022 Vertically integrated operator (development + operations) \u2192 data products that span CRM, PMS, ERP handoffs are interview gold\u2026",
+                    "textStyle": {
+                      "fontFace": "Segoe UI",
+                      "fontSize": 9.25
+                    }
+                  }
+                ]
+              },
+              {
+                "textRuns": [
+                  {
+                    "value": "  \u2022 Hospitality-framed PM copy \u2192 measurement of service quality proxies (response times, rework) as ML features (*H*).",
+                    "textStyle": {
+                      "fontFace": "Segoe UI",
+                      "fontSize": 9.25
+                    }
+                  }
+                ]
+              },
+              {
+                "textRuns": [
+                  {
+                    "value": "  \u2022 DEI + accessible hiring messaging \u2192 responsible AI / monitoring for bias in ranking tools if ML touches hiring (governance).",
+                    "textStyle": {
+                      "fontFace": "Segoe UI",
+                      "fontSize": 9.25
+                    }
+                  }
+                ]
+              }
+            ]
+          }
+        }
+      ],
+      "background": [
+        {
+          "properties": {
+            "show": {
+              "expr": {
+                "Literal": {
+                  "Value": "false"
+                }
+              }
+            }
+          }
+        }
+      ]
+    },
+    "drillFilterOtherVisuals": false
+  }
+}

@@ -1,0 +1,277 @@
+/// Gold-layer lease scores produced by the renewal batch job (exported CSV / optional Delta mirror).
+/// Grain: one scored lease row (synthetic demo); CSV path from GoldRenewalCsvPath parameter.
+table GoldRenewalScores
+	lineageTag: 8eefc201-9265-4665-8412-afc4feed0005
+
+	measure 'Renewal Actual Rate %' = AVERAGE(GoldRenewalScores[renewed])
+		formatString: 0.0%
+		lineageTag: 922f12ab-cccc-dddd-eeee-101010101010
+
+	measure 'Avg Predicted Renewal Prob' = AVERAGE(GoldRenewalScores[renewal_probability_ml])
+		formatString: 0.00
+		lineageTag: 922f12ab-cccc-dddd-eeee-101010101011
+
+	measure 'Gold Lease Rows' = COUNTROWS(GoldRenewalScores)
+		formatString: #,##0
+		lineageTag: 922f12ab-cccc-dddd-eeee-101010101012
+
+	measure 'Avg Monthly Rent $' = AVERAGE(GoldRenewalScores[monthly_rent])
+		formatString: #,##0
+		lineageTag: 922f12ab-cccc-dddd-eeee-101010101013
+
+	measure 'Median Monthly Rent $' = MEDIAN(GoldRenewalScores[monthly_rent])
+		formatString: #,##0
+		lineageTag: 922f12ab-cccc-dddd-eeee-101010101014
+
+	measure 'Distinct Dataset Versions' = DISTINCTCOUNT(GoldRenewalScores[dataset_version_id])
+		formatString: 0
+		lineageTag: 922f12ab-cccc-dddd-eeee-101010101016
+
+	measure 'Avg Risk Score' = AVERAGE(GoldRenewalScores[risk_score])
+		formatString: 0.000
+		lineageTag: 922f12ab-cccc-dddd-eeee-101010101017
+
+	column lease_id
+		dataType: string
+		lineageTag: 10000001-aaaa-bbbb-cccc-ddddeeee0001
+		summarizeBy: none
+		sourceColumn: lease_id
+
+	column unit_id
+		dataType: string
+		lineageTag: 10000001-aaaa-bbbb-cccc-ddddeeee0002
+		summarizeBy: none
+		sourceColumn: unit_id
+
+	column property_id
+		dataType: string
+		lineageTag: 10000001-aaaa-bbbb-cccc-ddddeeee0003
+		summarizeBy: none
+		sourceColumn: property_id
+
+	column metro
+		dataType: string
+		lineageTag: 10000001-aaaa-bbbb-cccc-ddddeeee0004
+		summarizeBy: none
+		sourceColumn: metro
+
+	column lease_start_date
+		dataType: string
+		lineageTag: 10000001-aaaa-bbbb-cccc-ddddeeee0005
+		summarizeBy: none
+		sourceColumn: lease_start_date
+
+	column leased_month
+		dataType: string
+		lineageTag: 10000001-aaaa-bbbb-cccc-ddddeeee0006
+		summarizeBy: none
+		sourceColumn: leased_month
+
+	column as_of_date
+		dataType: string
+		lineageTag: 10000001-aaaa-bbbb-cccc-ddddeeee0007
+		summarizeBy: none
+		sourceColumn: as_of_date
+
+	column tenure_months
+		dataType: int64
+		formatString: 0
+		lineageTag: 10000001-aaaa-bbbb-cccc-ddddeeee0008
+		summarizeBy: average
+		sourceColumn: tenure_months
+
+	column monthly_rent
+		dataType: decimal
+		lineageTag: 10000001-aaaa-bbbb-cccc-ddddeeee0009
+		summarizeBy: average
+		sourceColumn: monthly_rent
+
+	column market_rent_proxy
+		dataType: decimal
+		lineageTag: 10000001-aaaa-bbbb-cccc-ddddeeee0010
+		summarizeBy: average
+		sourceColumn: market_rent_proxy
+
+	column rent_to_market_ratio
+		dataType: decimal
+		lineageTag: 10000001-aaaa-bbbb-cccc-ddddeeee0011
+		summarizeBy: average
+		sourceColumn: rent_to_market_ratio
+
+	column late_payment_count_12m
+		dataType: int64
+		formatString: 0
+		lineageTag: 10000001-aaaa-bbbb-cccc-ddddeeee0012
+		summarizeBy: sum
+		sourceColumn: late_payment_count_12m
+
+	column work_order_count_12m
+		dataType: int64
+		formatString: 0
+		lineageTag: 10000001-aaaa-bbbb-cccc-ddddeeee0013
+		summarizeBy: sum
+		sourceColumn: work_order_count_12m
+
+	column prior_renewal_count
+		dataType: int64
+		formatString: 0
+		lineageTag: 10000001-aaaa-bbbb-cccc-ddddeeee0014
+		summarizeBy: average
+		sourceColumn: prior_renewal_count
+
+	column bedrooms
+		dataType: int64
+		formatString: 0
+		lineageTag: 10000001-aaaa-bbbb-cccc-ddddeeee0015
+		summarizeBy: none
+		sourceColumn: bedrooms
+
+	column renewed
+		dataType: int64
+		formatString: 0
+		lineageTag: 10000001-aaaa-bbbb-cccc-ddddeeee0016
+		summarizeBy: average
+		sourceColumn: renewed
+
+	column synthetic_signal_z
+		dataType: decimal
+		lineageTag: 10000001-aaaa-bbbb-cccc-ddddeeee0017
+		summarizeBy: average
+		sourceColumn: synthetic_signal_z
+
+	column dataset_version_id
+		dataType: string
+		lineageTag: 10000001-aaaa-bbbb-cccc-ddddeeee0018
+		summarizeBy: none
+		sourceColumn: dataset_version_id
+
+	column cohort_month
+		dataType: string
+		lineageTag: 10000001-aaaa-bbbb-cccc-ddddeeee0019
+		summarizeBy: none
+		sourceColumn: cohort_month
+
+	column is_long_tenure
+		dataType: int64
+		formatString: 0
+		lineageTag: 10000001-aaaa-bbbb-cccc-ddddeeee0020
+		summarizeBy: none
+		sourceColumn: is_long_tenure
+
+	column high_service_load
+		dataType: int64
+		formatString: 0
+		lineageTag: 10000001-aaaa-bbbb-cccc-ddddeeee0021
+		summarizeBy: none
+		sourceColumn: high_service_load
+
+	column ecosystem_segment
+		dataType: string
+		lineageTag: 10000001-aaaa-bbbb-cccc-ddddeeee0401
+		summarizeBy: none
+		sourceColumn: ecosystem_segment
+
+	column brand_line
+		dataType: string
+		lineageTag: 10000001-aaaa-bbbb-cccc-ddddeeee0402
+		summarizeBy: none
+		sourceColumn: brand_line
+
+	column flagship_style
+		dataType: string
+		lineageTag: 10000001-aaaa-bbbb-cccc-ddddeeee0403
+		summarizeBy: none
+		sourceColumn: flagship_style
+
+	column metro_cluster
+		dataType: string
+		lineageTag: 10000001-aaaa-bbbb-cccc-ddddeeee0404
+		summarizeBy: none
+		sourceColumn: metro_cluster
+
+	column property_name
+		dataType: string
+		lineageTag: 10000001-aaaa-bbbb-cccc-ddddeeee0405
+		summarizeBy: none
+		sourceColumn: property_name
+
+	column renewal_probability_ml
+		dataType: decimal
+		lineageTag: 10000001-aaaa-bbbb-cccc-ddddeeee0022
+		summarizeBy: average
+		sourceColumn: renewal_probability_ml
+
+	column predicted_renewed_flag
+		dataType: int64
+		formatString: 0
+		lineageTag: 10000001-aaaa-bbbb-cccc-ddddeeee0023
+		summarizeBy: none
+		sourceColumn: predicted_renewed_flag
+
+	column risk_score
+		dataType: decimal
+		lineageTag: 10000001-aaaa-bbbb-cccc-ddddeeee0024
+		summarizeBy: average
+		sourceColumn: risk_score
+
+	column risk_tier
+		dataType: string
+		lineageTag: 10000001-aaaa-bbbb-cccc-ddddeeee0025
+		summarizeBy: none
+		sourceColumn: risk_tier
+
+	column mlflow_run_id
+		dataType: string
+		lineageTag: 10000001-aaaa-bbbb-cccc-ddddeeee0026
+		summarizeBy: none
+		sourceColumn: mlflow_run_id
+
+	column model_name
+		dataType: string
+		lineageTag: 10000001-aaaa-bbbb-cccc-ddddeeee0027
+		summarizeBy: none
+		sourceColumn: model_name
+
+	column scored_at
+		dataType: string
+		lineageTag: 10000001-aaaa-bbbb-cccc-ddddeeee0028
+		summarizeBy: none
+		sourceColumn: scored_at
+
+	partition GoldRenewalScores-csv = m
+		mode: import
+		source =
+				let
+				    Source =
+				        Csv.Document(
+				            File.Contents(#"GoldRenewalCsvPath"),
+				            [Delimiter = ",", Encoding = 65001, QuoteStyle = QuoteStyle.Csv]
+				        ),
+				    #"Promoted Headers" = Table.PromoteHeaders(Source, [PromoteAllScalars = true]),
+				    #"Changed Type" =
+				        Table.TransformColumnTypes(#"Promoted Headers", {
+				            {"tenure_months", Int64.Type},
+				            {"monthly_rent", type number},
+				            {"market_rent_proxy", type number},
+				            {"rent_to_market_ratio", type number},
+				            {"late_payment_count_12m", Int64.Type},
+				            {"work_order_count_12m", Int64.Type},
+				            {"prior_renewal_count", Int64.Type},
+				            {"bedrooms", Int64.Type},
+				            {"renewed", Int64.Type},
+				            {"synthetic_signal_z", type number},
+				            {"is_long_tenure", Int64.Type},
+				            {"high_service_load", Int64.Type},
+				            {"ecosystem_segment", type text},
+				            {"brand_line", type text},
+				            {"flagship_style", type text},
+				            {"metro_cluster", type text},
+				            {"property_name", type text},
+				            {"renewal_probability_ml", type number},
+				            {"predicted_renewed_flag", Int64.Type},
+				            {"risk_score", type number}
+				        })
+				in
+				    #"Changed Type"
+
+	annotation PBI_ResultType = Table

@@ -1,0 +1,300 @@
+{
+  "name": "Core Spaces — Boardroom analytics",
+  "textClasses": {
+    "title": {
+      "fontFace": "Segoe UI Semibold",
+      "fontSize": 17,
+      "color": "#1B2333"
+    },
+    "callout": {
+      "fontFace": "Segoe UI Semibold",
+      "fontSize": 13,
+      "color": "#1B2333"
+    },
+    "header": {
+      "fontFace": "Segoe UI Semibold",
+      "fontSize": 11,
+      "color": "#4A6178"
+    },
+    "label": {
+      "fontFace": "Segoe UI",
+      "fontSize": 10,
+      "color": "#4A5568"
+    },
+    "largeTitle": {
+      "fontFace": "Segoe UI Semibold",
+      "fontSize": 22,
+      "color": "#1B2333"
+    }
+  },
+  "dataColors": [
+    "#21808D",
+    "#E85D4C",
+    "#3F68EB",
+    "#1B2333",
+    "#5E8CFF",
+    "#C9A227",
+    "#9B7ED9",
+    "#6B7585",
+    "#8AA3EB",
+    "#2ECC9B",
+    "#D97642",
+    "#5C6BC0",
+    "#7EB6F2",
+    "#A68B52",
+    "#4A6178",
+    "#B8C9F2"
+  ],
+  "foreground": "#1B2333",
+  "foregroundNeutralSecondary": "#4A5568",
+  "foregroundNeutralTertiary": "#8892A0",
+  "background": "#FAF8F4",
+  "tableAccent": "#3F68EB",
+  "good": "#21808D",
+  "neutral": "#8892A0",
+  "bad": "#C53030",
+  "maximum": "#3F68EB",
+  "minimum": "#E8E2D9",
+  "center": "#1B2333",
+  "hyperlink": "#3F68EB",
+  "visitedHyperlink": "#2C52C4",
+  "visualStyles": {
+    "page": {
+      "*": {
+        "background": [
+          {
+            "properties": {
+              "color": {
+                "solid": {
+                  "color": {
+                    "expr": {
+                      "Literal": {
+                        "Value": "'#FAF8F4'"
+                      }
+                    }
+                  }
+                }
+              },
+              "transparency": {
+                "expr": {
+                  "Literal": {
+                    "Value": "0D"
+                  }
+                }
+              }
+            }
+          }
+        ],
+        "wallpaper": [
+          {
+            "properties": {
+              "transparency": {
+                "expr": {
+                  "Literal": {
+                    "Value": "100D"
+                  }
+                }
+              }
+            }
+          }
+        ]
+      }
+    },
+    "*": {
+      "*": {
+        "border": [
+          {
+            "properties": {
+              "show": {
+                "expr": {
+                  "Literal": {
+                    "Value": "false"
+                  }
+                }
+              }
+            }
+          }
+        ],
+        "visualHeader": [
+          {
+            "properties": {
+              "show": {
+                "expr": {
+                  "Literal": {
+                    "Value": "false"
+                  }
+                }
+              }
+            }
+          }
+        ]
+      }
+    },
+    "card": {
+      "*": {
+        "padding": [
+          {
+            "properties": {
+              "padding": {
+                "expr": {
+                  "Literal": {
+                    "Value": "12D"
+                  }
+                }
+              }
+            }
+          }
+        ],
+        "labels": [
+          {
+            "properties": {
+              "fontSize": {
+                "expr": {
+                  "Literal": {
+                    "Value": "20D"
+                  }
+                }
+              }
+            }
+          }
+        ],
+        "categoryLabels": [
+          {
+            "properties": {
+              "fontSize": {
+                "expr": {
+                  "Literal": {
+                    "Value": "10D"
+                  }
+                }
+              }
+            }
+          }
+        ]
+      }
+    },
+    "clusteredBarChart": {
+      "*": {
+        "labels": [
+          {
+            "properties": {
+              "fontSize": {
+                "expr": {
+                  "Literal": {
+                    "Value": "10D"
+                  }
+                }
+              }
+            }
+          }
+        ],
+        "categoryAxis": [
+          {
+            "properties": {
+              "fontSize": {
+                "expr": {
+                  "Literal": {
+                    "Value": "10D"
+                  }
+                }
+              }
+            }
+          }
+        ],
+        "valueAxis": [
+          {
+            "properties": {
+              "fontSize": {
+                "expr": {
+                  "Literal": {
+                    "Value": "10D"
+                  }
+                }
+              }
+            }
+          }
+        ]
+      }
+    },
+    "clusteredColumnChart": {
+      "*": {
+        "labels": [
+          {
+            "properties": {
+              "fontSize": {
+                "expr": {
+                  "Literal": {
+                    "Value": "10D"
+                  }
+                }
+              }
+            }
+          }
+        ],
+        "categoryAxis": [
+          {
+            "properties": {
+              "fontSize": {
+                "expr": {
+                  "Literal": {
+                    "Value": "10D"
+                  }
+                }
+              }
+            }
+          }
+        ],
+        "valueAxis": [
+          {
+            "properties": {
+              "fontSize": {
+                "expr": {
+                  "Literal": {
+                    "Value": "10D"
+                  }
+                }
+              }
+            }
+          }
+        ]
+      }
+    },
+    "slicer": {
+      "*": {
+        "header": [
+          {
+            "properties": {
+              "textSize": {
+                "expr": {
+                  "Literal": {
+                    "Value": "11D"
+                  }
+                }
+              },
+              "fontFamily": {
+                "expr": {
+                  "Literal": {
+                    "Value": "'Segoe UI'"
+                  }
+                }
+              }
+            }
+          }
+        ],
+        "items": [
+          {
+            "properties": {
+              "textSize": {
+                "expr": {
+                  "Literal": {
+                    "Value": "11D"
+                  }
+                }
+              }
+            }
+          }
+        ]
+      }
+    }
+  }
+}

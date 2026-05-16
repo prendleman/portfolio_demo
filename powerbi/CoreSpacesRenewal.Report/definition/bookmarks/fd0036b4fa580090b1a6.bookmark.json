@@ -1,0 +1,19 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/bookmark/1.4.0/schema.json",
+  "displayName": "Competition",
+  "name": "fd0036b4fa580090b1a6",
+  "explorationState": {
+    "version": "1.3",
+    "activeSection": "aa70_competition_lens",
+    "filters": {
+      "byExpr": []
+    },
+    "sections": {},
+    "objects": {
+      "merge": {}
+    }
+  },
+  "options": {
+    "targetVisualNames": []
+  }
+}

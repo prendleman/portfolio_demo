@@ -1,0 +1,19 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/bookmark/1.4.0/schema.json",
+  "displayName": "Marketing",
+  "name": "050dfbcadbf53997d11c",
+  "explorationState": {
+    "version": "1.3",
+    "activeSection": "aa40_marketing",
+    "filters": {
+      "byExpr": []
+    },
+    "sections": {},
+    "objects": {
+      "merge": {}
+    }
+  },
+  "options": {
+    "targetVisualNames": []
+  }
+}

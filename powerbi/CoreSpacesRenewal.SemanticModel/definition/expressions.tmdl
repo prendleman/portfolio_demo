@@ -1,0 +1,4 @@
+expression GoldRenewalCsvPath = "G:/My Drive/core spaces/portfolio-core-spaces-demo/data/gold/gold_renewal_scores.csv" meta [IsParameterQuery=true, Type="Text", IsParameterQueryRequired=true]
+	lineageTag: a7c441b2-3e9d-4c2a-a1fd-ccb8e901a5c1
+
+	annotation PBI_ResultType = Text

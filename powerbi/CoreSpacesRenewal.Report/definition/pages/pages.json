@@ -1,0 +1,15 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/pagesMetadata/1.0.0/schema.json",
+  "pageOrder": [
+    "aa10_exec_overview",
+    "aa20_operations",
+    "aa30_finance",
+    "aa40_marketing",
+    "aa50_governance",
+    "aa55_ai_platform",
+    "aa60_opportunity_lab",
+    "aa70_competition_lens",
+    "eef0portfoliorenew01"
+  ],
+  "activePageName": "aa10_exec_overview"
+}

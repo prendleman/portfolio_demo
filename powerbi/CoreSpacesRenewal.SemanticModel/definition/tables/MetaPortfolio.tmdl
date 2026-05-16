@@ -1,0 +1,50 @@
+/// Key/value freshness + documentation rows for auditors / interview walkthrough.
+/// Not joined to GoldRenewalScores — demo disclaimers and lineage narrative only.
+table MetaPortfolio
+	lineageTag: 6d2d3c4f-aaaa-bbbb-cccc-111122223333
+
+	column Key
+		dataType: string
+		lineageTag: 70112233-abcd-abcd-abcd-abcdabcd0001
+		summarizeBy: none
+		sourceColumn: Key
+
+	column Value
+		dataType: string
+		lineageTag: 70112233-abcd-abcd-abcd-abcdabcd0002
+		summarizeBy: none
+		sourceColumn: Value
+
+	column Order
+		dataType: int64
+		isHidden
+		formatString: 0
+		lineageTag: 70112233-abcd-abcd-abcd-abcdabcd0003
+		summarizeBy: none
+		sourceColumn: Order
+
+	partition MetaPortfolio-par = m
+		mode: import
+		source =
+				let
+				    Source =
+				        #table(
+				            {"Key", "Value"},
+				            {
+				                {"Portfolio", "Synthetic multifamily renewal demo (Databricks + BI story)"},
+				                {"Grain", "One row per lease episode at modeled decision date"},
+				                {"Model", "Scikit-learn logistic regression (exported to gold CSV for Import mode)"},
+				                {"Databricks pattern", "Notebooks mirror local pipeline; optionally write Delta layers"},
+				                {"Governance placeholders", "dataset_version_id, scored_at, run id embedded in Gold table"},
+				                {"Synthetic data disclaimer", "All values are artificially generated"},
+				                {"Public web capture", "research/core_spaces/site + derived/company_intel.md document marketing language + partner mentions for interview context only"},
+				                {"Design metaphor (BI only)", "Multi-tone concentric 'O' / ring gradient language â€” echoed in charts and chrome, not trademarked assets"}
+				            }
+				        ),
+				    #"Added Index" = Table.AddIndexColumn(Source, "Order", 1, 1),
+				    #"Changed Type" =
+				        Table.TransformColumnTypes(#"Added Index", {{"Key", type text}, {"Value", type text}, {"Order", Int64.Type}})
+				in
+				    #"Changed Type"
+
+	annotation PBI_ResultType = Table

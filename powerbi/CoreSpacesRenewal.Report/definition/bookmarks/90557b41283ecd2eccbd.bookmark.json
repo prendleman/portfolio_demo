@@ -1,0 +1,19 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/bookmark/1.4.0/schema.json",
+  "displayName": "Finance",
+  "name": "90557b41283ecd2eccbd",
+  "explorationState": {
+    "version": "1.3",
+    "activeSection": "aa30_finance",
+    "filters": {
+      "byExpr": []
+    },
+    "sections": {},
+    "objects": {
+      "merge": {}
+    }
+  },
+  "options": {
+    "targetVisualNames": []
+  }
+}

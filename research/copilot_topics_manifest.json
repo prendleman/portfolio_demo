@@ -1,0 +1,80 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Copilot Studio design pattern / grounding contract (portfolio demo)",
+  "description": "Grounding pattern (allowlist + bindings + refusals) inspired by Copilot Studio / tabular governance \u2014 a portable JSON manifest for demos, not a deployed Copilot Studio topic flow or tenant agent.",
+  "semantic_model_entity": "GoldRenewalScores",
+  "allowed_measure_topics": [
+    "Renewal_Actual_Rate_by_metro",
+    "Renewal_Actual_Rate_by_risk_tier",
+    "Avg_Predicted_Renewal_Prob_by_ecosystem_segment",
+    "Median_Monthly_Rent_by_metro_cluster",
+    "Gold_table_freshness_scored_at"
+  ],
+  "topic_bindings": [
+    {
+      "topic_id": "renewal_rate_metro",
+      "user_phrases": [
+        "renewal rate by city",
+        "how are we doing in Chicago",
+        "compare renewals across metros"
+      ],
+      "tabular_binding": {
+        "measure": "Renewal Actual Rate %",
+        "suggested_dimension": "metro",
+        "filter_hints": [
+          "leased_month",
+          "risk_tier"
+        ]
+      },
+      "citation_rule": "Echo active slicers (metro, risk_tier, leased_month) and scored_at max per gold contract."
+    },
+    {
+      "topic_id": "model_vs_actual_uplift",
+      "user_phrases": [
+        "model vs actual renewals",
+        "is the model calibrated",
+        " uplift by decile"
+      ],
+      "tabular_binding": {
+        "measures": [
+          "Renewal Actual Rate %",
+          "Avg Predicted Renewal Prob"
+        ],
+        "suggested_dimension": "risk_tier"
+      },
+      "citation_rule": "State risk_tier semantics (D1 = lowest modeled churn sensitivity in this demo)."
+    },
+    {
+      "topic_id": "portfolio_freshness",
+      "user_phrases": [
+        "when was this scored",
+        "which model version",
+        "dataset version"
+      ],
+      "tabular_binding": {
+        "columns": [
+          "scored_at",
+          "mlflow_run_id",
+          "dataset_version_id",
+          "model_name"
+        ],
+        "aggregate": "MAX(scored_at), DISTINCT dataset_version_id"
+      },
+      "citation_rule": "Never fabricate lineage; if NULL, say unknown and route to ITSM ticket template."
+    }
+  ],
+  "refusal_topics": [
+    "legal_commitments",
+    "undocumented_rent_concessions",
+    "individual_resident_PII",
+    "unverified_financial_guidance",
+    "competitive_market_share_claims_without_cited_source"
+  ],
+  "required_citations_pattern": "Always state filter context (metro, cohort month, ecosystem segment) and data_as_of timestamp when discussing metrics.",
+  "synthetic_data_banner": "Demo portfolio uses synthetic leases; production copilots must read from authorized lakehouse tables with RLS/CLS parity to Power BI semantic models.",
+  "genai_wedge_placeholder": {
+    "pattern": "Retrieve-then-classify on synthetic service tickets",
+    "governance_link": "databricks/docs/governance.md",
+    "no_pii_banner": true
+  }
+}
