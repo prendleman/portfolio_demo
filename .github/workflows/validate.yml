@@ -19,6 +19,9 @@ jobs:
       - name: Install dependencies
         run: pip install -r requirements.txt
 
+      - name: pip check (dependency graph consistency)
+        run: pip check
+
       - name: Verify README image paths
         run: python scripts/verify_readme_assets.py
 

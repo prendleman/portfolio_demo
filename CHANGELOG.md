@@ -2,6 +2,15 @@
 
 All notable changes to this portfolio repository are documented here. This project uses [Semantic Versioning](https://semver.org/spec/v2.0.0.html) for **tagged snapshots** you share with employers; day-to-day demo improvements may land on `main` between tags.
 
+## [Unreleased]
+
+### Added
+
+- Dependabot updates for **pip** (`requirements.txt`) and **GitHub Actions** workflows.
+- `SECURITY.md` with a short reporting policy for this public demo repo.
+- CI **`pip check`** after installs to catch broken dependency metadata early.
+- README **validate** workflow status badge.
+
 ## [1.0.0] — 2026-05-15
 
 ### Summary
