@@ -47,6 +47,8 @@ The **technical scenario** shows how that problem maps through:
 
 ## Review This Repo in 5 Minutes
 
+For a compact **interview-oriented** walkthrough (synthetic demo framing, first 90 days, and known limitations), see [`INTERVIEW_REVIEW.md`](INTERVIEW_REVIEW.md).
+
 1. Skim the **architecture map** below for the full flow.
 2. Open
    [`databricks/02b_train_sparkml_variant/`](databricks/02b_train_sparkml_variant/)
