@@ -3,5 +3,8 @@
 powerbi/CoreSpacesRenewal.Report/definition/** linguist-vendored
 powerbi/CoreSpacesRenewal.Report/StaticResources/** linguist-vendored
 
+# Site captures are research artifacts, not application HTML.
+research/core_spaces/site/raw_html/** linguist-vendored
+
 # Markdown: normalize to LF so GitHub/CommonMark parsing is stable (no CRLF-only quirks).
 *.md text eol=lf

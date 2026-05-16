@@ -12,7 +12,8 @@ Dry-run (default):
 
   python scripts/push_github_repo_metadata.py --dry-run
 
-Env fallbacks: GITHUB_REPOSITORY=owner/name, or GIT_REPO_URL from .env via repo_dotenv.
+Env fallbacks: GITHUB_REPOSITORY=owner/name, or tokens from .env via repo_dotenv
+(GH_TOKEN, GITHUB_TOKEN, or GIT_PERSONAL_ACCESS_TOKEN).
 """
 
 from __future__ import annotations
@@ -20,6 +21,7 @@ from __future__ import annotations
 import argparse
 import json
 import os
+import ssl
 import sys
 import urllib.error
 import urllib.request
@@ -40,6 +42,15 @@ _DEFAULT_TOPICS = [
     "real-estate-analytics",
     "ai-governance",
 ]
+
+
+def _ssl_context() -> ssl.SSLContext:
+    try:
+        import certifi
+
+        return ssl.create_default_context(cafile=certifi.where())
+    except Exception:
+        return ssl.create_default_context()
 
 
 def _request(
@@ -64,7 +75,11 @@ def _request(
     if body is not None:
         req.add_header("Content-Type", "application/json")
     try:
-        with urllib.request.urlopen(req, timeout=60) as resp:  # noqa: S310 — fixed GitHub API URLs
+        with urllib.request.urlopen(  # noqa: S310 — fixed GitHub API URLs
+            req,
+            timeout=60,
+            context=_ssl_context(),
+        ) as resp:
             return resp.getcode(), resp.read().decode("utf-8", errors="replace")[:2000]
     except urllib.error.HTTPError as e:
         return e.code, e.read().decode("utf-8", errors="replace")[:4000]
@@ -98,7 +113,12 @@ def main() -> None:
         o, r = gh_repo.split("/", 1)
         args.owner, args.repo = o, r
 
-    token = (args.token or os.environ.get("GH_TOKEN") or os.environ.get("GITHUB_TOKEN", "")).strip()
+    token = (
+        args.token
+        or os.environ.get("GH_TOKEN", "")
+        or os.environ.get("GITHUB_TOKEN", "")
+        or os.environ.get("GIT_PERSONAL_ACCESS_TOKEN", "")
+    ).strip()
     topics = [t.strip().lower() for t in args.topics.split(",") if t.strip()]
     repo_full = f"{args.owner}/{args.repo}"
 
