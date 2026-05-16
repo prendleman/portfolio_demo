@@ -85,6 +85,16 @@ flowchart LR
     H --> I[Governance and adoption]
 ```
 
+## Visual Preview
+
+Illustrative preview cards for quick orientation (synthetic styling—not captured from a live tenant or proprietary systems). See [`screenshots/README.md`](screenshots/README.md) to replace with your own exports.
+
+| Artifact | Preview |
+| --- | --- |
+| Power BI Renewal Intelligence overview | ![Power BI overview](screenshots/powerbi_overview.png) |
+| Renewal Lens app concept | ![Renewal Lens app](screenshots/renewal_lens_app.png) |
+| Monitoring / drift output | ![Monitoring output](screenshots/monitoring_output.png) |
+
 ## What Is Implemented vs. Design Intent
 
 | Area | Implemented in repo | Design intent / tenant-dependent |
