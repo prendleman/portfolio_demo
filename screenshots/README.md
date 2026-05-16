@@ -12,3 +12,5 @@ Regenerate the placeholder cards from the repo root:
 ```bash
 python scripts/gen_screenshot_placeholders.py
 ```
+
+`scripts/verify_readme_assets.py` (run in CI) checks that every local `README.md` image path exists on disk.

@@ -89,11 +89,30 @@ flowchart LR
 
 Illustrative preview cards for quick orientation (synthetic styling—not captured from a live tenant or proprietary systems). See [`screenshots/README.md`](screenshots/README.md) to replace with your own exports.
 
-| Artifact | Preview |
-| --- | --- |
-| Power BI Renewal Intelligence overview | ![Power BI overview](screenshots/powerbi_overview.png) |
-| Renewal Lens app concept | ![Renewal Lens app](screenshots/renewal_lens_app.png) |
-| Monitoring / drift output | ![Monitoring output](screenshots/monitoring_output.png) |
+GitHub sometimes fails to render images that sit inside **Markdown** pipe tables; this block uses an **HTML** table so previews stay reliable on the repo home page.
+
+<table>
+  <thead>
+    <tr>
+      <th>Artifact</th>
+      <th>Preview</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td width="28%"><strong>Power BI Renewal Intelligence overview</strong></td>
+      <td><img src="screenshots/powerbi_overview.png" alt="Power BI renewal intelligence preview (synthetic demo)" width="100%" /></td>
+    </tr>
+    <tr>
+      <td><strong>Renewal Lens app concept</strong></td>
+      <td><img src="screenshots/renewal_lens_app.png" alt="Renewal Lens Databricks app preview (synthetic demo)" width="100%" /></td>
+    </tr>
+    <tr>
+      <td><strong>Monitoring / drift output</strong></td>
+      <td><img src="screenshots/monitoring_output.png" alt="PSI and schema drift monitoring preview (synthetic demo)" width="100%" /></td>
+    </tr>
+  </tbody>
+</table>
 
 ## What Is Implemented vs. Design Intent
 
