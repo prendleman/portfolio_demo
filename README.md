@@ -1,6 +1,7 @@
 # Core Spaces Renewal Intelligence Demo
 
 [![validate](https://github.com/prendleman/portfolio_demo/actions/workflows/validate.yml/badge.svg?branch=main)](https://github.com/prendleman/portfolio_demo/actions/workflows/validate.yml?query=branch%3Amain)
+[![license: MIT](https://img.shields.io/badge/license-MIT-blue.svg)](LICENSE)
 
 Synthetic **Databricks / MLflow / Power BI** portfolio package for
 **renewal prediction**, risk-style segmentation, **AI
