@@ -7,5 +7,5 @@ python-dotenv>=1.0.0
 scikit-learn>=1.8.0
 
 # PBIP tooling (optional): live site logo capture via Selenium; branding PNG generation
-Pillow>=10.2.0
+Pillow>=12.3.0
 selenium>=4.15.0
